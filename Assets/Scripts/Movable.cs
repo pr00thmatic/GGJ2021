@@ -77,8 +77,7 @@ public class Movable : MonoBehaviour {
   }
 
   public void Move (Vector3 delta, float speed) {
-    this.rawDelta = Vector3.Project(delta, direction.forward).normalized * speed * Time.deltaTime *
-      Screen.width / 1920;
+    this.rawDelta = (Vector3.Project(delta, direction.forward).normalized * speed);
     body.MovePosition(transform.position + this.delta);
   }
 

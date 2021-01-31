@@ -20,6 +20,10 @@ public class RoomCameras : MonoBehaviour {
     cam.onRoomSolved += HandleSolution;
   }
 
+  void OnDisable () {
+    cam.onRoomSolved -= HandleSolution;
+  }
+
   public void HandleSolution () {
     controllableCamera.SetActive(false);
     solvedCamera.SetActive(true);

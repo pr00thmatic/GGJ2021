@@ -13,9 +13,17 @@ public class BaitBox : MonoBehaviour {
   public Animator bait;
   public Renderer r;
 
+  void Reset () {
+    r = GetComponentInChildren<Renderer>();
+  }
+
   void OnMouseUpAsButton () {
-    box.SetTrigger("Open");
-    StartCoroutine(_SolveBait());
+    if (box) {
+      box.SetTrigger("Open");
+      StartCoroutine(_SolveBait());
+    } else {
+      gameObject.SetActive(false);
+    }
   }
 
   IEnumerator _SolveBait () {
@@ -26,8 +34,10 @@ public class BaitBox : MonoBehaviour {
       t += Time.deltaTime;
       yield return null;
     }
-    bait.SetTrigger("Solve");
-    box.gameObject.SetActive(false);
-    onSolved?.Invoke();
+    if (bait) {
+      bait.SetTrigger("Solve");
+      box.gameObject.SetActive(false);
+      onSolved?.Invoke();
+    }
   }
 }
