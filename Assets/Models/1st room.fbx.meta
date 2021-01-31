@@ -2,7 +2,283 @@ fileFormatVersion: 2
 guid: 6394a99232a197d49b26ff478e33afa8
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -3253853503885301699
+    second: dude|camera pivotAction
+  - first:
+      74: -5303404961030296909
+    second: dude|Cube.002Action
+  - first:
+      74: 2920954557039270885
+    second: dude|Cube.002Action.001
+  - first:
+      74: 2378453736990950432
+    second: dude|Cube.003Action
+  - first:
+      74: 2196998702959293333
+    second: dude|Cube.003Action.001
+  - first:
+      74: -6815693004777401377
+    second: dude|Cube.004Action
+  - first:
+      74: -294188548604227003
+    second: dude|Cube.005Action
+  - first:
+      74: -3193461777204824203
+    second: dude|Cube.006Action
+  - first:
+      74: -2026362025631230797
+    second: dude|Cube.007Action
+  - first:
+      74: 9174424098238702432
+    second: dude|Cube.008Action
+  - first:
+      74: 7362195093703651133
+    second: dude|Cube.009Action
+  - first:
+      74: 8788785983973122315
+    second: dude|Cube.010Action
+  - first:
+      74: -1107549373154242707
+    second: dude|Cube.010Action.001
+  - first:
+      74: 4694872273013972638
+    second: dude|Cube.011Action
+  - first:
+      74: -6077713421512721351
+    second: dude|Cube.012Action
+  - first:
+      74: -396534961952560796
+    second: dude|Cube.013Action
+  - first:
+      74: -388826977523610483
+    second: dude|Cube.014Action
+  - first:
+      74: 4942782611566313561
+    second: dude|Cube.015Action
+  - first:
+      74: -1218410767378962585
+    second: dude|Cube.016Action
+  - first:
+      74: -5826499001893187022
+    second: dude|Cube.016Action.001
+  - first:
+      74: 4623566568277466277
+    second: dude|Cube.016Action.002
+  - first:
+      74: 8142300843525364707
+    second: dude|Cube.016Action.003
+  - first:
+      74: 4721111937657512146
+    second: dude|Cube.017Action
+  - first:
+      74: 703401737178986823
+    second: dude|Cube.018Action
+  - first:
+      74: -7791027686452159055
+    second: dude|Cube.019Action
+  - first:
+      74: -4354839745962619549
+    second: dude|Cube.020Action
+  - first:
+      74: 5008135461009062445
+    second: dude|Cube.022Action
+  - first:
+      74: -5965139566357151135
+    second: dude|Cube.023Action
+  - first:
+      74: 6968765129317841517
+    second: dude|Cube.024Action
+  - first:
+      74: 1376389667484985169
+    second: dude|Cube.025Action
+  - first:
+      74: -8878036537873098537
+    second: dude|Cube.026Action
+  - first:
+      74: -153167496961130277
+    second: dude|CubeAction
+  - first:
+      74: 54300584609342628
+    second: dude|dudeAction
+  - first:
+      74: -5774826318055164438
+    second: dude|Plane.001Action
+  - first:
+      74: -5965048531263218790
+    second: dude|Plane.001Action.001
+  - first:
+      74: 7705202778175510863
+    second: dude|Plane.002Action
+  - first:
+      74: -5939943549870017969
+    second: dude|Plane.003Action
+  - first:
+      74: 1404383886372726298
+    second: dude|Plane.004Action
+  - first:
+      74: 4819534479491537013
+    second: dude|Plane.005Action
+  - first:
+      74: -2505604826036008613
+    second: dude|Plane.007Action
+  - first:
+      74: -5340387340347183143
+    second: dude|Sphere.001Action
+  - first:
+      74: 5575056349098078657
+    second: dude|Sphere.002Action
+  - first:
+      74: 5517272671472503929
+    second: dude|Sphere.003Action
+  - first:
+      74: -7541818664672564354
+    second: dude|Sphere.004Action
+  - first:
+      74: 285534833820349960
+    second: dude|Sphere.006Action
+  - first:
+      74: -8130736089486557280
+    second: dude|SphereAction
+  - first:
+      74: -6125924362605994637
+    second: camera pivot|camera pivotAction
+  - first:
+      74: -479063782885799892
+    second: camera pivot|Cube.002Action
+  - first:
+      74: 2322413925809616415
+    second: camera pivot|Cube.002Action.001
+  - first:
+      74: 6551754762573827770
+    second: camera pivot|Cube.003Action
+  - first:
+      74: -7484785321461559791
+    second: camera pivot|Cube.003Action.001
+  - first:
+      74: 7118192705982064289
+    second: camera pivot|Cube.004Action
+  - first:
+      74: -9084309750234369233
+    second: camera pivot|Cube.005Action
+  - first:
+      74: -954079406010635938
+    second: camera pivot|Cube.006Action
+  - first:
+      74: 4263087127186206514
+    second: camera pivot|Cube.007Action
+  - first:
+      74: 2875637097242673358
+    second: camera pivot|Cube.008Action
+  - first:
+      74: -106619744695661073
+    second: camera pivot|Cube.009Action
+  - first:
+      74: 1178234861318705382
+    second: camera pivot|Cube.010Action
+  - first:
+      74: 3111231045928566694
+    second: camera pivot|Cube.010Action.001
+  - first:
+      74: 2070236008594694522
+    second: camera pivot|Cube.011Action
+  - first:
+      74: 6416154299300520465
+    second: camera pivot|Cube.012Action
+  - first:
+      74: 3256829545491425900
+    second: camera pivot|Cube.013Action
+  - first:
+      74: 8675478019237517246
+    second: camera pivot|Cube.014Action
+  - first:
+      74: -5564054121045286016
+    second: camera pivot|Cube.015Action
+  - first:
+      74: 6908509062806521130
+    second: camera pivot|Cube.016Action
+  - first:
+      74: -228758076837698610
+    second: camera pivot|Cube.016Action.001
+  - first:
+      74: -2784330527534512392
+    second: camera pivot|Cube.016Action.002
+  - first:
+      74: 8059403817510043428
+    second: camera pivot|Cube.016Action.003
+  - first:
+      74: 8299968527620622955
+    second: camera pivot|Cube.017Action
+  - first:
+      74: 8767639648077063474
+    second: camera pivot|Cube.018Action
+  - first:
+      74: 3901118682572535846
+    second: camera pivot|Cube.019Action
+  - first:
+      74: -6893214875769047502
+    second: camera pivot|Cube.020Action
+  - first:
+      74: 1934286458397886011
+    second: camera pivot|Cube.022Action
+  - first:
+      74: -4978555486688151094
+    second: camera pivot|Cube.023Action
+  - first:
+      74: -4474962974683746249
+    second: camera pivot|Cube.024Action
+  - first:
+      74: -6220141954029758444
+    second: camera pivot|Cube.025Action
+  - first:
+      74: -5715726489926477399
+    second: camera pivot|Cube.026Action
+  - first:
+      74: -538769662986103469
+    second: camera pivot|CubeAction
+  - first:
+      74: -499738625350556931
+    second: camera pivot|dudeAction
+  - first:
+      74: 4183906114075754603
+    second: camera pivot|Plane.001Action
+  - first:
+      74: 8371730563392014521
+    second: camera pivot|Plane.001Action.001
+  - first:
+      74: -2826511523153667498
+    second: camera pivot|Plane.002Action
+  - first:
+      74: 1843773977555417724
+    second: camera pivot|Plane.003Action
+  - first:
+      74: -5655837018383372373
+    second: camera pivot|Plane.004Action
+  - first:
+      74: 5108237286515917661
+    second: camera pivot|Plane.005Action
+  - first:
+      74: -5074293946172752169
+    second: camera pivot|Plane.007Action
+  - first:
+      74: 4232849318288009440
+    second: camera pivot|Sphere.001Action
+  - first:
+      74: -8986860363383281952
+    second: camera pivot|Sphere.002Action
+  - first:
+      74: -6060987656975177291
+    second: camera pivot|Sphere.003Action
+  - first:
+      74: 1234556670233738029
+    second: camera pivot|Sphere.004Action
+  - first:
+      74: -6057055825490873287
+    second: camera pivot|Sphere.006Action
+  - first:
+      74: 8510799972850180727
+    second: camera pivot|SphereAction
   externalObjects:
   - first:
       type: UnityEngine:Material
