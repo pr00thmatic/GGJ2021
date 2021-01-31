@@ -55,7 +55,7 @@ public class Movable : MonoBehaviour {
     outline.OutlineWidth = 0;
   }
 
-  void FixedUpdate () {
+  void LateUpdate () {
     Vector3 deltaP = transform.position - lastPosition;
     float angle = Vector3.Angle(deltaP.normalized, direction.forward.normalized);
     if (angle < 179 && angle > 1) {
