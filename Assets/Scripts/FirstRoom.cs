@@ -37,9 +37,9 @@ public class FirstRoom : MonoBehaviour {
   public void UpdateLight () {
     key.Check();
     float t = key.count / (float) key.Total;
-    theLight.intensity = Mathf.SmoothDamp(theLight.intensity, Mathf.Lerp(0.02f, 0.25f, t),
+    theLight.intensity = Mathf.SmoothDamp(theLight.intensity, Mathf.Lerp(0.02f, 0.2f, t),
                                           ref lightSmoothSpeed, lightSmoothTime);
-    theLight.bounceIntensity = Mathf.SmoothDamp(theLight.bounceIntensity, Mathf.Lerp(0, 3, t),
+    theLight.bounceIntensity = Mathf.SmoothDamp(theLight.bounceIntensity, Mathf.Lerp(0, 2, t),
                                                 ref bounceSmoothSpeed, lightSmoothTime);
   }
 }
