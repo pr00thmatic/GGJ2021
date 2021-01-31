@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 public class DraggingCursor : MonoBehaviour {
   [Header("Configuration")]
   public float moveSpeed = 5;
+  public float buildMoveSpeed = 10;
 
   [Header("Information")]
   public Movable selected;
@@ -41,9 +42,15 @@ public class DraggingCursor : MonoBehaviour {
     }
 
     if (selected && Input.GetMouseButton(0)) {
+      float s;
+      #if UNITY_EDITOR
+      s = moveSpeed;
+      #else
+      s = buildMoveSpeed;
+      #endif
       selected.Move((Viewport.Right * Input.GetAxis("Mouse X") +
                      Viewport.Up * Input.GetAxis("Mouse Y") +
-                     Viewport.Forward * Input.GetAxis("Mouse Y")), moveSpeed);
+                     Viewport.Forward * Input.GetAxis("Mouse Y")), s);
     }
 
     Cursor.visible = !selected;
