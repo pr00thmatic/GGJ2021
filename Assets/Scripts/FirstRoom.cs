@@ -7,6 +7,11 @@ public class FirstRoom : MonoBehaviour {
   public VisibilityCheck key;
   public CameraSolutionChecker solution;
   public Light theLight;
+  public float lightSmoothTime = 0.2f;
+
+  [Header("Information")]
+  public float lightSmoothSpeed = 0;
+  public float bounceSmoothSpeed = 0;
 
   void OnEnable () {
     Movable.onDeselected += HandleBox;
@@ -19,6 +24,10 @@ public class FirstRoom : MonoBehaviour {
     // solution.onRoomSolved -= HandleRoomSolved;
   }
 
+  void Update () {
+    UpdateLight();
+  }
+
   public void HandleBox (Movable box) {
     if (!box.GetComponentInParent<FirstRoom>()) return;
     solution.canBeSolved = key.Check();
@@ -26,8 +35,11 @@ public class FirstRoom : MonoBehaviour {
   }
 
   public void UpdateLight () {
+    key.Check();
     float t = key.count / (float) key.Total;
-    theLight.intensity = Mathf.Lerp(0.02f, 0.2f, t);
-    theLight.bounceIntensity = Mathf.Lerp(0, 2, t);
+    theLight.intensity = Mathf.SmoothDamp(theLight.intensity, Mathf.Lerp(0.02f, 0.25f, t),
+                                          ref lightSmoothSpeed, lightSmoothTime);
+    theLight.bounceIntensity = Mathf.SmoothDamp(theLight.bounceIntensity, Mathf.Lerp(0, 3, t),
+                                                ref bounceSmoothSpeed, lightSmoothTime);
   }
 }
