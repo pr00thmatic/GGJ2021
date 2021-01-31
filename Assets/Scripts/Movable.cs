@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movable : MonoBehaviour {
+  public static event System.Action<Movable> onDeselected;
+
   [Header("Configuration")]
   public float deltaSmoothTime = 0.2f;
   public float smoothOutlineTime = 0.4f;
@@ -17,6 +19,9 @@ public class Movable : MonoBehaviour {
   public float smoothedOutline;
   public float smoothOutlineSpeed = 0;
   public Color originalOutlineColor;
+  public float selectedTimestamp = -1;
+  public float TimeSinceSelected { get => Time.time - selectedTimestamp; }
+  public bool DidExit { get => TimeSinceSelected > 0.1f; }
 
   [Header("Initialization")]
   public Transform direction;
@@ -80,11 +85,14 @@ public class Movable : MonoBehaviour {
   public void Select () {
     body.isKinematic = false;
     outlineTarget = 5;
+    selectedTimestamp = Time.time;
   }
 
   public void Deselect () {
     body.isKinematic = true;
     rawDelta = Vector3.zero;
     outlineTarget = 0;
+    selectedTimestamp = Time.time;
+    onDeselected?.Invoke(this);
   }
 }
