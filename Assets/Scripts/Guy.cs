@@ -9,8 +9,10 @@ public class Guy : NonPersistentSingleton<Guy> {
 
   [Header("Initialization")]
   public NavMeshAgent agent;
+  public Animator animator;
 
   void Update () {
+    animator.SetFloat("Speed", agent.velocity.magnitude);
     if (target && agent.velocity.magnitude < 0.1f) {
       transform.forward = target.forward;
     }

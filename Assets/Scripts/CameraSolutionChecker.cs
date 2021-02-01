@@ -5,12 +5,16 @@ using UnityEngine;
 public class CameraSolutionChecker : MonoBehaviour {
   public event System.Action<CameraSolution> onRoomSolved;
   public bool canBeSolved = false;
+  public List<CameraSolution> solved;
 
   void OnTriggerStay (Collider c) {
     if (!canBeSolved) return;
 
-    if (c.GetComponent<CameraSolution>()) {
-      onRoomSolved?.Invoke(c.GetComponent<CameraSolution>());
+    CameraSolution justSolved = c.GetComponent<CameraSolution>();
+    if (justSolved && !solved.Contains(justSolved)) {
+      solved.Add(justSolved);
+      onRoomSolved?.Invoke(justSolved);
+      RewardSound.Instance.Play();
     }
   }
 }

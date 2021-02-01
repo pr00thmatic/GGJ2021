@@ -18,6 +18,7 @@ public class FirstRoomEnding : MonoBehaviour {
 
   public void EnableFirstLight () {
     firstLight.SetActive(true);
+    RewardSound.Instance.Play();
   }
 
   public void NextLevel () {

@@ -7,5 +7,11 @@ public class LastShot : MonoBehaviour {
 
   void OnEnable () {
     Guy.Instance.Go(solvedGuyTarget);
+    StartCoroutine(_EventuallySit());
+  }
+
+  IEnumerator _EventuallySit () {
+    yield return new WaitForSeconds(3);
+    Guy.Instance.animator.SetTrigger("Sit");
   }
 }

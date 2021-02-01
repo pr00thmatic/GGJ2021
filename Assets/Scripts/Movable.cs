@@ -55,19 +55,20 @@ public class Movable : MonoBehaviour {
     outline.OutlineWidth = 0;
   }
 
-  void LateUpdate () {
-    Vector3 deltaP = transform.position - lastPosition;
-    float angle = Vector3.Angle(deltaP.normalized, direction.forward.normalized);
-    if (angle < 179 && angle > 1) {
-      transform.position = lastPosition;
-      deltaSmoothVelocity = Vector3.zero;
-      delta = Vector3.zero;
-      outline.OutlineColor = invalidOutlineColor;
-    } else {
-      outline.OutlineColor = originalOutlineColor;
-    }
-    lastPosition = transform.position;
-  }
+  // hot fix that unfixes the fix but fixes the thing
+  // void LateUpdate () {
+  //   Vector3 deltaP = transform.position - lastPosition;
+  //   float angle = Vector3.Angle(deltaP.normalized, direction.forward.normalized);
+  //   if (angle < 179 && angle > 1) {
+  //     transform.position = lastPosition;
+  //     deltaSmoothVelocity = Vector3.zero;
+  //     delta = Vector3.zero;
+  //     outline.OutlineColor = invalidOutlineColor;
+  //   } else {
+  //     outline.OutlineColor = originalOutlineColor;
+  //   }
+  //   lastPosition = transform.position;
+  // }
 
   void Update () {
     delta = Vector3.SmoothDamp(delta, rawDelta, ref deltaSmoothVelocity, deltaSmoothTime);

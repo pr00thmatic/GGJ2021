@@ -12,6 +12,7 @@ public class FirstRoom : MonoBehaviour {
   [Header("Information")]
   public float lightSmoothSpeed = 0;
   public float bounceSmoothSpeed = 0;
+  public int lightCount = 0;
 
   void OnEnable () {
     Movable.onDeselected += HandleBox;
@@ -29,6 +30,10 @@ public class FirstRoom : MonoBehaviour {
   public void HandleBox (Movable box) {
     if (!box.GetComponentInParent<FirstRoom>()) return;
     solution.canBeSolved = key.Check();
+    if (key.count > lightCount) {
+      lightCount = key.count;
+      RewardSound.Instance.Play();
+    }
     UpdateLight();
   }
 

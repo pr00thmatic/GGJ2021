@@ -7,6 +7,7 @@ public class SecondRoomVictoryCondition : MonoBehaviour {
   public bool fishingRods = false;
   public bool boat = false;
   public bool bait = false;
+  public int lightLevel = 0;
 
   [Header("Initialization")]
   public ActivateOnTriggerExit rod;
@@ -38,15 +39,21 @@ public class SecondRoomVictoryCondition : MonoBehaviour {
     if (m.GetComponentInParent<SecondRoom>()) {
       boat = boatVisibility.Check();
     }
+    if (lightLevel < boatVisibility.count) {
+      RewardSound.Instance.Play();
+      lightLevel = boatVisibility.count;
+    }
     CheckSolvable();
   }
 
   public void HandleActivation () {
+    RewardSound.Instance.Play();
     fishingRods = true;
     CheckSolvable();
   }
 
   public void HandleSolve () {
+    RewardSound.Instance.Play();
     bait = true;
     CheckSolvable();
   }

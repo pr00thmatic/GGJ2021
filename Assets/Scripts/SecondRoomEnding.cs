@@ -14,6 +14,7 @@ public class SecondRoomEnding : MonoBehaviour {
 
   public void TurnFireOn () {
     fireLight.SetActive(true);
+    RewardSound.Instance.Play();
   }
 
   public void NextLevel () {
