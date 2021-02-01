@@ -24,7 +24,9 @@ public class RoomCameras : MonoBehaviour {
     cam.onRoomSolved -= HandleSolution;
   }
 
-  public void HandleSolution () {
+  public void HandleSolution (CameraSolution solved) {
+    if (solved.GetComponentInParent<LevelRoot>() !=
+        GetComponentInParent<LevelRoot>()) return;
     controllableCamera.SetActive(false);
     solvedCamera.SetActive(true);
     if (nextCamera) {

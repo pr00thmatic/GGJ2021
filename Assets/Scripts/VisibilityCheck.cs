@@ -21,7 +21,11 @@ public class VisibilityCheck : MonoBehaviour {
     count = 0;
     RaycastHit hit;
     foreach (Transform child in rays) {
-      Ray ray = new Ray(child.position, visibilityTarget.position - child.position);
+      Transform target = visibilityTarget;
+      if (child.childCount != 0) {
+        target = child.GetChild(0);
+      }
+      Ray ray = new Ray(child.position, target.position - child.position);
       if (!Physics.Raycast(ray, out hit, 100, LayerMask.GetMask("Clickable"))) {
         count++;
       }

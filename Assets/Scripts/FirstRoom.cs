@@ -15,13 +15,11 @@ public class FirstRoom : MonoBehaviour {
 
   void OnEnable () {
     Movable.onDeselected += HandleBox;
-    // solution.onRoomSolved += HandleRoomSolved;
     UpdateLight();
   }
 
   void OnDisable () {
     Movable.onDeselected -= HandleBox;
-    // solution.onRoomSolved -= HandleRoomSolved;
   }
 
   void Update () {
